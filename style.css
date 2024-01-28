@@ -519,3 +519,201 @@ header .song-side::before{
     border-radius: 50%;
     box-shadow: 2px 2px 8px #121213;
 }
+
+.song-side .content{
+    width: 90%;
+    height: 30%;
+    /* border: 1px solid #fff; */
+    margin: auto;
+    padding-top: 20px;
+}
+
+.song-side .content h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.song-side .content p{
+    font-size: 11px;
+    font-weight: 400;
+    color: #4c5262;
+    margin: 5px;
+}
+
+.song-side .content .buttons{
+    margin-top: 15px;
+}
+
+.song-side .content .buttons button{
+    width: 130px;
+    height: 30px;
+    border: 2px solid #36e2ec;
+    outline: none;
+    border-radius: 20px;
+    background-color: #5adae0;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.song-side .content .buttons button:hover{
+    background: none;   
+    color: #36e2ec;
+}
+
+.song-side .content .buttons button:nth-child(2){
+    background: none;   
+    color: #36e2ec;
+}
+
+.song-side .content .buttons button:nth-child(2):hover{
+    background: #36e2ec;   
+    color: #fff;
+}
+
+.song-side .popular-song{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+    /* border: 1px solid #fff; */
+}
+
+.song-side .popular-song .h4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.song-side .popular-song .h4 .bi{
+    color: #a4a8b4;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.song-side .popular-song .h4 .bi:hover{
+    color: #fff
+}
+
+.song-side .popular-song .pop-song{
+    width: 100%;
+    height: 150px;
+    margin-top: 15px;
+    display: flex;
+    /* border: 1px solid #fff; */
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.song-side .popular-song .pop-song::-webkit-scrollbar{
+    display: none;
+}
+
+.song-side .popular-song .pop-song li{
+    min-width: 100px;
+    height: 140px;
+    list-style-type: none;
+    margin-right: 10px;
+    transition: 0.3s linear;
+}
+
+.song-side .popular-song .pop-song li:hover{
+    background-color: rgb(105, 105, 170, 0.1);
+}
+
+.song-side .popular-song .pop-song li .img-play{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-side .popular-song .pop-song li .img-play img{
+    width: 100%;
+    height: 100%;
+}
+
+.song-side .popular-song .pop-song li .img-play .bi{
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    opacity: 0;
+}
+
+.song-side .popular-song .pop-song li:hover .img-play .bi{
+    opacity: 1;
+}
+
+.song-side .popular-song .pop-song li h5{
+    padding: 5px 0px 0px 5px;
+    line-height: 15px;
+    font-size: 10px;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.song-side .popular-song .pop-song li h5.artist{
+    font-size: 9px;
+    color: #4c5262;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.song-side .popular-artists{
+    width: 90%;
+    height: auto;
+    /* border: 1px solid #fff; */
+    margin: auto;
+    margin-top: 15px;
+}
+
+.song-side .popular-artists .h4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.song-side .popular-artists .h4 .bi{
+    color: #a4a8b4;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.song-side .popular-artists .h4 .bi:hover{
+    color: #fff
+}
+
+.song-side .popular-artists .item{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    /* border: 1px solid #fff; */
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.song-side .popular-artists .item::-webkit-scrollbar{
+    display: none;
+}
+
+.song-side .popular-artists .item li{
+    list-style-type: none;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+} 
+
+.song-side .popular-artists .item li img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+} 
