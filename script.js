@@ -235,3 +235,33 @@ music.addEventListener("timeupdate", () => {
 seek.addEventListener("input", () => {
   music.currentTime = (seek.value * music.duration) / 100;
 });
+
+
+// Volume button
+
+let vol_icon = document.getElementById("vol_icon");
+let vol = document.getElementById("vol");
+let vol_bar = document.getElementsByClassName("vol_bar")[0];
+let vol_dot = document.getElementById("vol_dot");
+
+vol.addEventListener("input", updateVolume);
+vol.addEventListener("change", updateVolume);
+
+function updateVolume() {
+  let volValue = vol.value;
+
+  if (volValue == 0) {
+    vol_icon.classList.remove("bi-volume-up-fill", "bi-volume-down-fill");
+    vol_icon.classList.add("bi-volume-off-fill");
+  } else if (volValue > 0 && volValue <= 50) {
+    vol_icon.classList.remove("bi-volume-up-fill", "bi-volume-off-fill");
+    vol_icon.classList.add("bi-volume-down-fill");
+  } else {
+    vol_icon.classList.remove("bi-volume-down-fill", "bi-volume-off-fill");
+    vol_icon.classList.add("bi-volume-up-fill");
+  }
+
+  vol_bar.style.width = `${volValue}%`;
+  vol_dot.style.left = `${volValue}%`;
+  music.volume = volValue / 100;
+}
