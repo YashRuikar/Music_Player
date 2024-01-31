@@ -17,8 +17,8 @@ body{
 }
 
 header{
-    width: 85%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
     /* border: 1px solid #fff; */
     display: flex;
     flex-wrap: wrap;
@@ -151,7 +151,7 @@ header{
 }
 
 .menu_side .menu_song li h5{
-    font-size: 11px;
+    font-size: 12.5px;
     margin-left: 15px;
     width: 170px;
     /* border: 1px solid #fff; */
@@ -161,7 +161,7 @@ header{
 }
 
 .menu_side .menu_song li h5 .artist{
-    font-size: 9px;
+    font-size: 11px;
     color: #4c5262;
 }
 
@@ -701,7 +701,7 @@ header .song_side::before{
 .song_side .popular_song .pop_song li h5{
     padding: 5px 0px 0px 5px;
     line-height: 15px;
-    font-size: 10px;
+    font-size: 11px;
     width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -756,8 +756,8 @@ header .song_side::before{
 .song_side .popular_artists .item li{
     list-style-type: none;
     position: relative;
-    min-width: 60px;
-    height: 60px;
+    min-width: 68px;
+    height: 68px;
     border-radius: 50%;
     margin-right: 20px;
     cursor: pointer;
@@ -775,14 +775,14 @@ header .song_side::before{
 
 @media screen and (max-width: 1200px) {
     header{
-        width: 95%;
+        width: 100vw;
         transition: 0.5s linear;
     }
     .menu_side .song_side{
         width: 30%;
     }
     .song_side{
-        width: 70%;
+        width: 75%;
     }
     .song_side .content{
         height: 18%;

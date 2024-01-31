@@ -523,32 +523,53 @@ music.addEventListener("ended", () => {
 });
 
 
-let menu_list_active_button = document.getElementById('menu_list_active_button')
-let menu_side = document.getElementsByClassName('menu_side')[0]
+let menu_list_active_button = document.getElementById('menu_list_active_button');
+let menu_side = document.getElementsByClassName('menu_side')[0];
+let song_side = document.getElementsByClassName('song_side')[0];
 
+function hideMenu() {
+  menu_side.style.transform = "translateX(-100%)";
+  menu_list_active_button.style.opacity = 1;
+}
+
+// Add click event listener to menu_list_active_button
 menu_list_active_button.addEventListener('click', () => {
-  menu_side.style.transform = "unset"
-  menu_list_active_button.style.opacity = 0
-})
+  menu_side.style.transform = "unset";
+  menu_list_active_button.style.opacity = 0;
+});
 
+// Check if the screen width is less than or equal to 930px
+function isMobileScreen() {
+  return window.innerWidth <= 930;
+}
 
-let song_side = document.getElementsByClassName('song_side')[0]
+// Function to handle song_side click
+function handleSongSideClick() {
+  if (isMobileScreen()) {
+    hideMenu();
+  }
+}
 
-song_side.addEventListener('click', () => {
-  menu_side.style.transform = "translateX(-100%)"
-  menu_list_active_button.style.opacity = 1
-})
+// Add click event listener to song_side based on the initial screen width
+if (isMobileScreen()) {
+  song_side.addEventListener('click', handleSongSideClick);
+}
 
+// Listen for resize events to dynamically add/remove the event listener based on screen width
+window.addEventListener('resize', () => {
+  if (isMobileScreen()) {
+    song_side.addEventListener('click', handleSongSideClick);
+  } else {
+    song_side.removeEventListener('click', handleSongSideClick);
+  }
+});
 
-
-
-
-
-
-
-
-
-
+// Add click event listener to document to hide menu when clicking anywhere on the page
+document.addEventListener('click', (event) => {
+  if (!menu_side.contains(event.target) && !song_side.contains(event.target)) {
+    hideMenu();
+  }
+});
 
 
 // Left and right buttons to shuffle songs list on content section
