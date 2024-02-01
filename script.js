@@ -527,10 +527,10 @@ let menu_list_active_button = document.getElementById('menu_list_active_button')
 let menu_side = document.getElementsByClassName('menu_side')[0];
 let song_side = document.getElementsByClassName('song_side')[0];
 
-function hideMenu() {
-  menu_side.style.transform = "translateX(-100%)";
-  menu_list_active_button.style.opacity = 1;
-}
+// function hideMenu() {
+//   menu_side.style.transform = "translateX(-100%)";
+//   menu_list_active_button.style.opacity = 1;
+// }
 
 // Add click event listener to menu_list_active_button
 menu_list_active_button.addEventListener('click', () => {
