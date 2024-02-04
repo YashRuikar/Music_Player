@@ -91,6 +91,36 @@ const songs = [
     songName: `Pachtaoge <br>
         <div class="artist">Arjit Singh</div>`,
     poster: "img/arjit/15.jpg",
+  },
+  {
+    id: "16",
+    songName: `Aayat <br>
+        <div class="artist">Arjit Singh</div>`,
+    poster: "img/arjit/16.jpg",
+  },
+  {
+    id: "17",
+    songName: `Ae Dil Hai Mushkil <br>
+        <div class="artist">Arjit Singh</div>`,
+    poster: "img/arjit/17.jpg",
+  },
+  {
+    id: "18",
+    songName: `Binte Dil <br>
+        <div class="artist">Arjit Singh</div>`,
+    poster: "img/arjit/18.jpg",
+  },
+  {
+    id: "19",
+    songName: `Channa Mereya <br>
+        <div class="artist">Arjit Singh</div>`,
+    poster: "img/arjit/19.jpg",
+  },
+  {
+    id: "20",
+    songName: `Duaa <br>
+        <div class="artist">Arjit Singh</div>`,
+    poster: "img/arjit/20.jpg",
   }
 ];
 
